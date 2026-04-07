@@ -24,3 +24,22 @@ function getRandom() {
     return Math.floor(Math.random() * 50 + 1);
 
 }
+
+function displayNumeriCasuali() {
+
+    listaNumeriDaMemorizzare.innerHTML = `<li>
+            ${ getRandom()}
+    </li>
+    <li>
+            ${ getRandom()}
+    </li>
+    <li>
+            ${ getRandom()}
+    </li>
+    <li>
+            ${ getRandom()}
+    </li>
+    <li>
+            ${ getRandom()}
+    </li>`;
+}
