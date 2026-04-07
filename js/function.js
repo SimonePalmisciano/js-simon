@@ -24,10 +24,12 @@ function displayCounter() {
         clearInterval(intervalId);
         countdown.classList.add('d-none');
         listaNumeriDaMemorizzare.classList.add('d-none');
+        istruzioniDelGioco.textContent = 'Adesso inserisci i numeri che ricordi!!';
     }
 
 }
 
+// inietta i numeri casuali figli di 'li' all'interno dell'html
 function displayNumeriCasuali() {
 
     listaNumeriDaMemorizzare.innerHTML = `<li>
@@ -47,9 +49,14 @@ function displayNumeriCasuali() {
     </li>`;
 }
 
-function mostraMessaggio() {
+// creiamo una funzione che verifichi se i numeri inseriti dall'utente 
+// sono corretti
+function verficaNumeriCorrettiHandler (event) {
+    event.preventDefault();
 
-    if (s) {
+    if (arrayNumeriCasuali.includes(formRisposte)) {
+        numeriIndovinati ++;
 
+        messaggio.textContent = `Hai indovinato: ${numeriIndovinati} numeri su 5.`
     }
 }
