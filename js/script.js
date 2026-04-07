@@ -13,3 +13,8 @@ const bottoneVerifica = document.querySelector('#btnConferma');
 const alertErrore = document.querySelector('#message');
 
 let countdownValue = 5; //cambia il timer una volta finite le prove
+
+let arrayNumeriCasuali = [];
+getRandom();
+
+console.log(arrayNumeriCasuali);
