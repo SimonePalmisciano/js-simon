@@ -7,18 +7,19 @@ const formRisposte = document.querySelector('#answersForm');
 const bottoneVerifica = document.querySelector('#btnConferma');
 const messaggio = document.querySelector('#message');
 
-let countdownValue = 5; //cambia il timer una volta finite le prove
+let countdownValue = 15; //cambia il timer una volta finite le prove
 let numeriIndovinati = 0;
 let arrayNumeriCasuali = [];
+
+// richiamo le funzione per far generare i numeri
 getRandom();
+// mostro i numeri subito
 displayNumeriCasuali();
+// nascondo subito il form altrimenti è brutto che carica all'inizio e poi scompare
 formRisposte.classList.add('d-none');
 
+// imposto l'intervallo del counter
 const intervalId = setInterval(displayCounter, 1000);
-// potrei inserire qui il display numeri casuali e nasconderli
-// dopo quando è finito il countdown
-// dovrei mettere che quando setInterval è disattivato o è fermo
-
 
 console.log(arrayNumeriCasuali);
 

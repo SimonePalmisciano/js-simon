@@ -21,10 +21,12 @@ function displayCounter() {
 
     if (countdownValue < 0) {
         clearInterval(intervalId);
+
         countdown.classList.add('d-none');
         listaNumeriDaMemorizzare.classList.add('d-none');
-        istruzioniDelGioco.textContent = 'Adesso inserisci i numeri che ricordi!!';
         formRisposte.classList.remove('d-none');
+
+        istruzioniDelGioco.textContent = 'Adesso inserisci i numeri che ricordi!!';
     }
 
 }
@@ -70,7 +72,7 @@ function verficaNumeriCorrettiHandler(event) {
     for (let i = 0; i < valoriInseriti.length; i++) {
         const numeroUtente = valoriInseriti[i];
         if (arrayNumeriCasuali.includes(numeroUtente)) {
-            numeriIndovinati++;
+            numeriIndovinati++; // aumento il counter dei numeri indovinati ogni volta che corrispondono
         }
     }
 
