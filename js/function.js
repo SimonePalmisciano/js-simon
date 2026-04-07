@@ -2,7 +2,7 @@
 
 
 // funzione che mostra il counter e lo fa sparire quando è arrivato a 0
-function displayCounter () {
+function displayCounter() {
 
     countdownValue--;
 
@@ -11,11 +11,16 @@ function displayCounter () {
     } else {
         clearInterval(intervalId);
         countdown.classList.add('d-none');
+        listaNumeriDaMemorizzare.classList.add('d-none');
     }
 
 }
 
-function displayNumeriDaMemorizzare () {
+// dovrà mostrare i numeri all'interno della lista
+// quindi bisognerà creare un innerHTML in cui inseriamo gli li figli di ul 
+// e dentro li bisogna far comparire numeri casuali da 1 a 50
+function getRandom() {
 
+    return Math.floor(Math.random() * 50 + 1);
 
 }
